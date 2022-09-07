@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 
-def kaneki(num=1000, lim=0, verbose=False, sub=7):
-    while num > lim:
-        print(f"{num} - {sub} = {num - 7}" if verbose else num - sub)
-        num -= sub
+def kaneki(num=1000, limit=0, verbose=False, subtract=7):
+    while num > limit:
+        print(f"{num} - {subtract} = {num - 7}" if verbose else num - subtract)
+        num -= subtract
 
 
 if __name__ == "__main__":
@@ -14,8 +14,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "num", type=int, default=1000, help="number to start with", nargs="?"
     )
-    parser.add_argument("-l", "--lim", type=int, default=0, help="number to stop after")
-    parser.add_argument("-s", "--sub", type=int, default=7, help="number to subtract")
+    parser.add_argument("-l", "--limit", type=int, default=0, help="number to stop after")
+    parser.add_argument("-s", "--subtract", type=int, default=7, help="number to subtract")
     parser.add_argument(
         "-v",
         "--verbose",
